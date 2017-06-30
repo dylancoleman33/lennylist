@@ -1,0 +1,18 @@
+<h1> Log In Form </h1>
+
+<%= form_for :login, {url: login_path} do |f| %>
+<div class="newuser">
+
+  <div>
+    <%= f.email_field :email, placeholder: 'email', class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.password_field :password, placeholder: 'password', class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.submit 'log in', class:'btn btn-success' %>
+  </div>
+</div>
+<% end %>

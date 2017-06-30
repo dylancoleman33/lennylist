@@ -1,0 +1,19 @@
+<h1>Sign Up</h1>
+<%= form_for @user do |f| %>
+<div class="newuser">
+
+
+<%= f.text_field :username, placeholder: "Username", class: "form-control" %>
+<br>
+<%= f.email_field :email, placeholder: "Email", class: "form-control" %>
+<br>
+<%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+<br>
+
+<%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
+
+
+
+<%= f.submit class:'btn btn-success' %>
+</div>
+<% end %>

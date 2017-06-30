@@ -1,0 +1,20 @@
+<h1><%= @user.username %></h1>
+<p><%= @user.email %></p>
+
+
+<u><h1 style="text-align: center"> My Product Page</h1></u>
+
+<h2> Click to <%= link_to "Add Product", new_product_path %> </h2>
+
+<% @user.products.each do |c| %>
+
+<%= link_to c.title, product_path(c) %>
+<br>
+<%= c.price %>
+<br>
+<%= c.description %>
+<br>
+<%= image_tag c.product_pic, class: "products" %>
+<br><br>
+
+ <% end %>

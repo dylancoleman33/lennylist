@@ -1,0 +1,20 @@
+<u><h1 style="text-align: center"> Add New Products </h1></u>
+
+<%= form_for @product do |f| %>
+<div class='newuser'>
+<%= f.text_field :title, placeholder: "Name", class: 'form-control'%>
+<br>
+
+<%= f.text_field :price, placeholder: "Price", class: 'form-control' %>
+<br>
+
+<%= f.text_area :description, placeholder: "Description", class: 'form-control' %>
+
+<br>
+<%= f.label :product_pic, 'Product Picture:' %>
+<%= f.file_field :product_pic, placeholder: "Picture" %>
+<br>
+<%= f.submit class: 'btn btn-success' %>
+</div>
+
+<% end %>

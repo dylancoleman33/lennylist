@@ -1,0 +1,17 @@
+<u><h1 style="text-align: center"> Lenny List </h1></u>
+<b><h3> An American classified advertisements website with products devoted for millennials, by millennials </h3></b>
+<br>
+<br>
+<br>
+<br>
+
+<ul>
+  <% @products.each do |f| %>
+    <div>
+      <li><%= f.title %></li>
+      <li><%= f.price %></li>
+      <li><%= f.description %></li>
+      <%= image_tag f.product_pic, class: "products"%>
+    </div>
+  <% end %>
+</ul>

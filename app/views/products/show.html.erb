@@ -1,0 +1,12 @@
+<h1>
+<%= @product.title %>
+
+<small>$<% @product.price%> </small>
+</h1>
+<p><%= @product.description%></p>
+
+<p><%= image_tag @product.product_pic%></p>
+
+
+<%= link_to 'Edit', edit_product_path(params[:id]) %>
+<%= link_to 'Remove Post', @product, method: :delete, data: {confirm: 'Are you sure'}%>
